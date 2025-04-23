@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1> MI LISTA DE TAREAS </h1>
+        
+        <input type="text" id="nueva-tarea" placeholder="Escribe una nueva tarea ">
+        
+        <select id="categoria-tarea">
+            <option value="work">Trabajo</option>
+            <option value="home">Hogar</option>
+            <option value="personal">Personal</option>
+        </select>
+
+   
+        <button onclick="agregarTarea()">Agregar Tarea</button>
+        <div class="filters">
+            <label for="estado-tarea">Filtro por estado:</label>
+            <select id="estado-tarea" onchange="filtrarTareas()">
+                <option value="todas">Todas</option>
+                <option value="completadas">Completadas</option>
+                <option value="pendientes">Pendientes</option>
+            </select>
+
+    
+            <label for="categoria-filtro">
+            Filtrar por categoría:</label>
+            <select id="categoria-filtro" onchange="filtrarTareas()">
+                <option value="todas">Todas</option>
+                <option value="work">Trabajo</option>
+                <option value="home">Hogar</option>
+                <option value="personal">Personal</option>
+            </select>
+        </div>
+
+        <ul id="Lista-Tareas">
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
